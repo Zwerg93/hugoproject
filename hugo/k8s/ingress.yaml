@@ -26,13 +26,6 @@ spec:
                 name: nginx
                 port:
                   number: 80
-          - path: /m.pouget/hugo/(.*)$
-            pathType: Prefix
-            backend:
-              service:
-                name: hugo
-                port:
-                  number: 3000
           - path: /m.pouget/(.*)$
             pathType: Prefix
             backend:

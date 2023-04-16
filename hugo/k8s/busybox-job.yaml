@@ -5,7 +5,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: knifehugo
+  name: knife
   namespace: student-m-pouget
 spec:
   backoffLimit: 1
@@ -17,7 +17,7 @@ spec:
         image: busybox:latest
         command: ["/bin/sh", "-c"]
         args: 
-          - mkdir -p /srv/hugodeploy;
+          - mkdir -p /srv/demo;
             echo "<html><head></head><body>Copy your web app to this location on this persistent volume.<br/>To the api ==> <a href="./api/user">./api/user</a></body></html>" > /srv/demo/index.html;
             sleep 900;
             echo done;
